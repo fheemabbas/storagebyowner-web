@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import HomeBanner from '../src/assets/images/home-hero.jpg';
 import ConvienentIcon from '../src/assets/images/icon-medium-convenient.png';
 import HomeLock from '../src/assets/images/home-lock.jpg';
@@ -8,7 +7,6 @@ import CoupleHome from '../src/assets/images/home-couple.jpg';
 import SafeIcon from '../src/assets/images/safe.png';
 import HomeAbout from '../src/assets/images/home-about.jpg';
 import RealEstate from '../src/assets/images/large-realestate.png';
-import ProfileImage from '../src/assets/images/home-testimonial.jpg';
 import BackgroundPattern from '../src/assets/images/background-pattern.png';
 import LargeLightBulb from '../src/assets/images/large-lightbulb.png';
 import LargectaShed from '../src/assets/images/largecta-shed.jpg'
@@ -16,30 +14,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import Header from './Component/Header';
 import Footer from "./Component/Footer";
+import SliderSection from "./Component/SliderSection";
 
 function App() {
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          autoplay: false
-        }
-      },
-    ]
-  };
 
   return (
     <div className="App">
@@ -130,93 +107,7 @@ function App() {
             <img src={HomeAbout} alt='about home' width={'570'} height='570' />
           </div>
         </section>
-
-        <section className='testomonies-detail-section' style={{ height: '662px' }}>
-          <h1>You don’t have to take our word for it. Take theirs.</h1>
-          <h4>We’re fostering storage solutions for renters and hosts just like you.</h4>
-          <div className='testomonies-detail-container'>
-            <Slider {...settings}>
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className='slider-box'>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac convallis erat. Cras velit magna, euismod gravida malesuada sodales, euismod vel eros. Pellentesque tristique ultrices sapien.”</p>
-                <div className='profile'>
-                  <div className='profile-img'>
-                    <img src={ProfileImage} alt='profile' width={'70'} height='70' className='pofile-picture' />
-                  </div>
-                  <div className='profile-detail'>
-                    <h6>Terrance R.</h6>
-                    <h6>Host</h6>
-                  </div>
-                </div>
-              </div>
-
-            </Slider>
-          </div>
-        </section>
+        <SliderSection />
 
         <section className='CTA-section' style={{ height: '600' }}>
           <img src={BackgroundPattern} alt='background' className='bgImage' width={'100%'} height={'100%'} />
